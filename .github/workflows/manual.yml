@@ -34,7 +34,19 @@ jobs:
       - name: Install dependencies
         shell: bash
         run: sudo apt-get install -y scons libfftw3-dev libopenmpi-dev openmpi-bin libhdf5-dev python3-numpy python3-dev libtiff5-dev unzip
-    
+
+      - name: Compile Xmipp
+        working-directory: ${{github.workspace}}
+        shell: bash      
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+          cd ..          
+          build-wrapper-linux-x86-64 --out-dir bw-output cmake --build build/
+          ls -l
+          cd bw-output
+          ls -l
 
       - name: SonarCloud Scan
         working-directory: ${{github.workspace}}
