@@ -3,4 +3,4 @@ project(scanning_ex)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(cpp_linux_ex src/HelloWorld.cpp)
+add_executable(scanning_ex src/HelloWorld.cpp)
