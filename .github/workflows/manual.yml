@@ -43,7 +43,7 @@ jobs:
           cd build
           cmake ..
           cd ..          
-          build-wrapper-linux-x86-64 --out-dir bw-output cmake --build build/
+          build-wrapper-linux-x86-64 --out-dir build_wrapper_output_directory cmake --build build/
           ls -l
           cd bw-output
           ls -l
